@@ -7,6 +7,18 @@ namespace GOTHIC_ENGINE {
   }
 
   void Game_Init() {
+    //// Plugin wrzucony do innego moda
+    //if ( parser->GetIndex( "Sefaris_SafeCheck" ) == Invalid ) {
+    //  Message::Info( "Plugin " + CPlugin::GetCurrentPlugin()->GetName() + " nie powinien byæ u¿ywany w tej modyfikacji!\nUsuñ go i uruchom grê ponownie.\nGra zostanie wy³¹czona..." );
+    //  gameMan->Done();
+    //}
+
+    // Spine
+    zoptions->ChangeDir( DIR_SYSTEM );
+    zFILE_VDFS* spine = new zFILE_VDFS( "SpineAPI.dll" );
+
+    if ( spine->Exists() )
+      Message::Info( "Wykryto narzêdzie Spine!\nNie mo¿emy zagwarantowaæ poprawnego dzia³ania modyfikacji.\n\nZalecane jest pobranie modyfikacji ze strony sefaris.eu" );
   }
 
   void Game_Exit() {
