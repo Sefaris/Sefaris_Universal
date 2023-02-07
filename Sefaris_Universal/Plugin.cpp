@@ -49,6 +49,7 @@ namespace GOTHIC_ENGINE {
   }
 
   void LoadEnd() {
+    SetMobNames();
   }
 
   void Game_LoadBegin_NewGame() {
