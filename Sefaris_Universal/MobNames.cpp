@@ -8,30 +8,18 @@ namespace GOTHIC_ENGINE {
 
     if ( zCVisual* visual = inter->GetVisual() ) {
       const string visualName = visual->GetVisualName();
-      if ( visualName == "INNOS_NW_MISC_01.ASC" ) {
-        inter->name = "MOBNAME_INNOS";
-        inter->SetName( inter->name );
-        return true;
-      }
-
-      if ( visualName == "INNOS_BELIAR_ADDON_01.ASC" ) {
-        inter->name = "MOBNAME_ADDON_IDOL";
-        inter->SetName( inter->name );
-        return true;
-      }
-
-      if ( visualName == "INNOS_ADANOS_01.ASC" ) {
-        inter->name = "MOBNAME_ADANOS";
+      if ( visualName == "CHESTSMALL_OCCHESTSMALLLOCKED.ASC" ) {
+        inter->name = "MOBNAME_CHEST";
         inter->SetName( inter->name );
         return true;
       }
     }
 
-    if ( name == "SWITCH" && inter->GetScemeName() == "LEVER" ) {
-      inter->name = "LEVER";
-      inter->SetName( inter->name );
-      return true;
-    }
+    //if ( name == "SWITCH" && inter->GetScemeName() == "LEVER" ) {
+    //  inter->name = "LEVER";
+    //  inter->SetName( inter->name );
+    //  return true;
+    //}
 
     return false;
   }
@@ -66,22 +54,24 @@ namespace GOTHIC_ENGINE {
 
       zSTRING scemeName = inter->GetScemeName();
 
-      if ( scemeName == "BOOK" )
-        inter->name = "MOBNAME_BOOK";
-      else if ( scemeName == "PAUKE" )
-        inter->name = "MOBNAME_DRUM";
-      else if ( scemeName == "ORCDRUM" )
-        inter->name = "MOBNAME_ORCDRUM";
-      else if ( scemeName == "TOUCHPLATE" || scemeName == "TURNSWITCH" )
-        inter->name = "MOBNAME_SWITCH";
-      else if ( scemeName == "VWHEEL" )
-        inter->name = "MOBNAME_WHEEL";
-      else if ( scemeName == "CHAIR" )
-        inter->name = "MOBNAME_CHAIRALT";
-      else if ( scemeName == "CHESTBIG" )
+      if ( scemeName == "CHESTSMALL" || scemeName == "CHESTBIG" )
         inter->name = "MOBNAME_CHEST";
       else if ( scemeName == "BENCH" )
         inter->name = "MOBNAME_BENCH";
+      else if ( scemeName == "GERBBAUM" )
+        inter->name = "MOBNAME_TAN";
+      else if ( scemeName == "DOOR_FRONT" )
+        inter->name = "MOBNAME_DOOR";
+      else if ( scemeName == "CHAIR" )
+        inter->name = "MOBNAME_CHAIR";
+      else if ( scemeName == "CHAIR" )
+        inter->name = "MOBNAME_CHAIR";
+      else if ( scemeName == "BEDHIGH_FRONT" )
+        inter->name = "MOBNAME_BED";
+      else if ( scemeName == "THRONE" )
+        inter->name = "MOBNAME_BED";
+      //else if ( scemeName == "LADDER" )
+      //  inter->name = "MOBNAME_LADDER";
 
       if ( inter->name.Length() )
         inter->SetName( inter->name );
