@@ -3,6 +3,8 @@
 
 // Automatically generated block
 #pragma region Includes
+#include "Randomizer.h"
+#include "Piano.h"
 #include "Plugin.h"
 #pragma endregion
 

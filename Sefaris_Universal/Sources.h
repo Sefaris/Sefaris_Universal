@@ -4,6 +4,7 @@
 // Automatically generated block
 #pragma region Includes
 #include "MobNames.cpp"
+#include "Piano.cpp"
 #include "Plugin.cpp"
 #pragma endregion
 

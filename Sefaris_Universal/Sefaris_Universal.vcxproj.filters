@@ -217,6 +217,9 @@
     <Filter Include="Plugin\Workspace\Entry">
       <UniqueIdentifier>{fe36e78c-41c3-4f48-bb4d-fc1e75025dec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugin\Workspace\Entry\Piano">
+      <UniqueIdentifier>{d2e898aa-e33d-4f6b-97d1-2570d21691df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Interface.cpp">
@@ -2782,6 +2785,15 @@
     </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="MobNames.cpp">
+      <Filter>Plugin\Workspace\Entry</Filter>
+    </ClInclude>
+    <ClInclude Include="Piano.h">
+      <Filter>Plugin\Workspace\Entry\Piano</Filter>
+    </ClInclude>
+    <ClInclude Include="Piano.cpp">
+      <Filter>Plugin\Workspace\Entry\Piano</Filter>
+    </ClInclude>
+    <ClInclude Include="Randomizer.h">
       <Filter>Plugin\Workspace\Entry</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,6 +19,8 @@ namespace GOTHIC_ENGINE {
 
     if ( spine->Exists() )
       Message::Info( "Wykryto narzêdzie Spine!\nNie mo¿emy zagwarantowaæ poprawnego dzia³ania modyfikacji.\n\nZalecane jest pobranie modyfikacji ze strony sefaris.eu" );
+
+    pianoManager = new PianoManager();
   }
 
   void Game_Exit() {
@@ -28,6 +30,7 @@ namespace GOTHIC_ENGINE {
   }
 
   void Game_Loop() {
+    pianoManager->Loop();
   }
 
   void Game_PostLoop() {
@@ -46,10 +49,12 @@ namespace GOTHIC_ENGINE {
   }
 
   void LoadBegin() {
+    pianoManager->LoadBegin();
   }
 
   void LoadEnd() {
     SetMobNames();
+    pianoManager->LoadEnd();
   }
 
   void Game_LoadBegin_NewGame() {
